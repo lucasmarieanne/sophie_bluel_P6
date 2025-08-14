@@ -202,10 +202,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const hasFile = fileInput.files.length > 0;
 
     if (hasTitle && hasCategory && hasFile) {
-      submitBtn.style.backgroundColor = '#1D6154';
+      submitBtn.classList.add('is-enabled');
       submitBtn.disabled = false;
     } else {
-      submitBtn.style.backgroundColor = '';
+      submitBtn.classList.remove('is-enabled');
       submitBtn.disabled = true;
     }
   }
