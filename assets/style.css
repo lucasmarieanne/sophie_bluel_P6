@@ -1,0 +1,506 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/** end reset css**/
+body {
+	max-width: 1140px;
+	margin:auto;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0
+}
+section {
+	margin: 50px 0
+}
+
+button {
+	outline: none;
+	border: none;
+}
+
+h1{
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C
+}
+
+h1 > span {
+	font-family: 'Work Sans';
+	font-size:10px;
+	letter-spacing: 0.1em;
+;
+}
+
+h2{
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 30px;
+	color: #1D6154
+}
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+
+}
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+
+li:hover {
+	color: #B1663C;
+}
+#introduction {
+	display: flex;
+	align-items: center;
+}
+#introduction figure {
+	flex: 1
+}
+#introduction img {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+
+#introduction article {
+	flex: 1
+}
+#introduction h2 {
+	margin-bottom: 1em;
+}
+
+#introduction p {
+	margin-bottom: 0.5em;
+}
+.portfolioTitle {
+	margin-bottom: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+#portfolio h2 {
+	text-align: center;
+}
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.gallery img {
+	width: 100%;
+
+}
+#contact {
+	width: 50%;
+margin: auto;
+}
+#contact > * {
+	text-align: center;
+
+}
+#contact h2{
+	margin-bottom: 20px;
+}
+#contact form {
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label {
+	margin: 2em 0 1em 0;
+}
+#contact textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+input[type="submit"]{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+}
+
+footer nav ul {
+	display: flex;
+	justify-content: flex-end;
+	margin: 2em
+}
+
+
+#filters {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-bottom: 2rem;
+  }
+  
+  .filter-btn {
+	padding: 0.5rem 1rem;
+	border: 2px solid #1D6154;
+	background: transparent;
+	color: #1D6154;
+	cursor: pointer;
+	border-radius: 50px;
+	font-weight: bold;
+  }
+  
+  .filter-btn.active,
+  .filter-btn:hover {
+	background: #1D6154;
+	color: #fff;
+  }
+  
+
+  .modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.modal-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  top: 0;
+  left: 0;
+}
+
+.modal-content {
+  position: relative;
+  background: white;
+  /* padding: 2rem 7rem; */
+  z-index: 1001;
+  /* max-width: 600px; */
+  border-radius: 8px;
+}
+
+.closeModalContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+	/* background-color: salmon; */
+}
+
+.closeModalContainer2 {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 20px;
+}
+
+#logout-btn {
+	color: #000;
+}
+
+#login-link a {
+	color: #000;
+
+}
+
+.modal-viewContainer1 {
+	padding: 2rem 7rem;
+
+}
+
+.modal-viewContainer {
+	padding: 2rem 7rem;
+	
+}
+
+#back-to-gallery {
+	background: none;
+  	font-size: 20px;
+  	cursor: pointer;
+}
+
+.close-modal {
+  	font-size: 24px;
+  	cursor: pointer;
+}
+
+.modal-view {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+}
+
+.modal-view1 {
+	/* padding: 2rem 7rem; */
+}
+
+.modal-view h3 {
+	text-align: center;
+	font-size: 30px;
+	margin-bottom: 40px;
+}
+
+.modal-view.hidden {
+  display: none;
+}
+
+.modal-figure {
+  position: relative;
+}
+
+.modal-figure img {
+	height: 100px;
+	width: 70px;
+	display: block;
+	object-fit: cover;
+}
+
+.modal-gallery {
+	position: relative;
+	margin: 50px 0;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(5, 1fr);
+	justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+}
+.modal-gallery img {
+	position: relative;
+}
+
+.delete-btn {
+	position: absolute;
+	padding: 5px;
+	top: 5px;      /* ajuster selon besoin */
+  	right: 5px;    /* ajuster selon besoin */
+  	z-index: 10;   /* plus grand que les autres éléments dans la galerie */
+	border-radius: 3px;
+	background-color: #000;
+	color: #fff;
+}
+
+.deleteButton {
+	border-top: .5px rgb(163, 163, 163) solid;
+	padding-top: 40px;
+	text-align: center;
+}
+
+#switch-to-add {
+	cursor: pointer;
+	padding: 10px 50px;
+	color: #fff;
+	border-radius: 50px;
+	background-color: #1D6154;
+}
+
+#open-modal {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	cursor: pointer;
+	text-align: center;
+	background: none;
+}
+
+#open-modal i {
+	color: #000;
+}
+
+#open-modal p {
+	color: #000;
+}
+
+.forgot-password {
+	text-align: center;
+	text-decoration: underline;
+}
+
+.admin-section {
+	display: none;
+}
+
+.bigHeader {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	background-color: #000;
+	padding: 20px;
+}
+
+.bigHeader i {
+	color: #fff;
+}
+
+.bigHeader p {
+	color: #fff;
+}
+
+.addPhotoBigContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #E8F1F6;
+	/* width: 400px; */
+	border-radius: 5px;
+	/* height: 150px; */
+	padding: 20px 150px;
+}
+
+.addPhotoContainer {
+	text-align: center;
+	padding: 0;
+}
+
+.addPhotoBigContainer i {
+	color: #B9C5CC;
+	font-size: 60px;
+}
+
+.add-btn {
+	cursor: pointer;
+	margin-top: 10px;
+	background-color: #CBD6DC;
+	border-radius: 50px;
+	padding: 15px 40px;
+	color: #306685;
+}
+
+.addPhotoBigContainer p {
+	color: #444444;
+	margin-top: 10px;
+	font-size: 13px;
+}
+
+#real-file-input {
+  display: none;
+}
+
+.input-form-container {
+	margin-top: 30px;
+}
+
+.input-form-container:nth-child(3) {
+	margin-bottom: 50px;
+}
+
+.input-form-container label {
+	display: inline-block;
+	padding-bottom: 10px;
+}
+
+.input-form input, select {
+	width: 100%;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0 4px 10px 2px #ebebeb;
+	padding: 15px;
+}
+
+.input-form input {
+	padding: 15px 0;
+}
+
+.input-form select {
+	cursor: pointer;
+}
+
+.addButton {
+	border-top: .5px rgb(163, 163, 163) solid;
+	padding-top: 40px;
+	text-align: center;
+}
+
+.addButton button {
+	cursor: pointer;
+	padding: 15px 100px;
+	color: #fff;
+	border-radius: 50px;
+	background-color: #A7A7A7;
+}
