@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     logoutBtn.addEventListener('click', (e) => {
       e.preventDefault();
       localStorage.removeItem('authToken');
-      localStorage.removeItem('userRole');
       window.location.href = 'index.html'; // ou 'login.html'
     });
   }

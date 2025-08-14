@@ -29,15 +29,8 @@ loginform.addEventListener('submit', async (e) => {
     const data = await resp.json();
     const { token } = data;
 
-    // On déduit le rôle en fonction de l'email
-    let role = 'client';
-    if (email === 'sophie.bluel@test.tld') {
-      role = 'admin';
-    }
-
     // On stocke le token ET le rôle
     localStorage.setItem('authToken', token);
-    localStorage.setItem('userRole', role);
 
     window.location.href = 'index.html';
 
