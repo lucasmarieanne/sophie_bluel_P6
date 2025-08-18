@@ -35,7 +35,7 @@ loginform.addEventListener('submit', async (e) => {
     window.location.href = 'index.html';
 
   } catch (err) {
-    errMsgEl.textContent = 'Erreur dans l’identifiant ou le mot de passe';
+    errMsgEl.textContent = "Erreur dans l'identifiant ou le mot de passe";
     errMsgEl.style.display = 'block';
   }
 });

@@ -91,4 +91,3 @@ async function fetchAndRenderCategories() {
     console.error('Erreur chargement des catégories :', err);
   }
 }
-
