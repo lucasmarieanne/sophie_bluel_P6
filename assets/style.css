@@ -311,10 +311,6 @@ footer nav ul {
 	position: relative;
 }
 
-.modal-view1 {
-	/* padding: 2rem 7rem; */
-}
-
 .modal-view h3 {
 	text-align: center;
 	font-size: 30px;
@@ -354,9 +350,9 @@ footer nav ul {
 .delete-btn {
 	position: absolute;
 	padding: 5px;
-	top: 5px;      /* ajuster selon besoin */
-  	right: 5px;    /* ajuster selon besoin */
-  	z-index: 10;   /* plus grand que les autres éléments dans la galerie */
+	top: 5px;
+  	right: 5px;
+  	z-index: 10;
 	border-radius: 3px;
 	background-color: #000;
 	color: #fff;
